@@ -57,6 +57,8 @@ jobs:
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_PYTHON_RUFF: true
+          VALIDATE_PYTHON_AUTOFORMAT: true
+          
 
   todos-to-issue:
     runs-on: "ubuntu-latest"
@@ -64,3 +66,6 @@ jobs:
       - uses: "actions/checkout@v4"
       - name: "Convert TODOs to Issues"
         uses: "alstr/todo-to-issue-action@v5"
+        with:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMMENT_MARKER: "TODO"
