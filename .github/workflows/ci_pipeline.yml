@@ -32,7 +32,9 @@ jobs:
           pip install -r requirements.txt
           pip install pytest pytest-cov  # Ensure test dependencies are installed
       - name: "Run tests with coverage"
-        run: pytest -vv --cov=src 
+        run: |
+         pytest -vv --cov=main --cov-report=xml
+
   
   lint:
     runs-on: "ubuntu-latest"
