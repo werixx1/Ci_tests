@@ -34,8 +34,7 @@ def import_from_file(filename="students.csv"):
         raise  
 
 
-#EXPORT
-
+# TODO: testing todo1 :) 
 def export_attendance(students, filename="students.csv"):
      with open(filename, 'w', newline='') as file: #'w' write file
         for student in students:
@@ -92,6 +91,7 @@ def edit_student(old_first_name, old_last_name, new_first_name, new_last_name, f
 
 # CHECKING ATTENDANCE
 
+# TODO: testing todo2 :)
 def mark_attenfance(students):
     print("Checking attendance: ")
     for student in students:  
