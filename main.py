@@ -34,7 +34,6 @@ def import_from_file(filename="students.csv"):
         raise  
 
 
-# TODO: testing todo1 :) 
 def export_attendance(students, filename="students.csv"):
      with open(filename, 'w', newline='') as file: #'w' write file
         for student in students:
@@ -60,6 +59,7 @@ def add_student(first_name, last_name, filename="students.csv"):
 
 
 # function that edits student list
+# TODO: testing todos-to-issue 3
 def edit_student(old_first_name, old_last_name, new_first_name, new_last_name, filename="students.csv"):
     students = []
     updated = False
@@ -91,7 +91,6 @@ def edit_student(old_first_name, old_last_name, new_first_name, new_last_name, f
 
 # CHECKING ATTENDANCE
 
-# TODO: testing todo2 :)
 def mark_attenfance(students):
     print("Checking attendance: ")
     for student in students:  
@@ -131,6 +130,7 @@ def presence_function():
       return presence_function()
 
 # CREATING 'ATTENDANCE_DICTIONARY' AND CREATING 'STUDENTS' LIST - a list where every element is a dictionary
+# TODO: testing todos-to-issue 2
 def manage_attendance():
   attendance_dictionary = {}
   student_id = 1
@@ -165,6 +165,7 @@ def manage_attendance():
   return attendance_dictionary
 
 # EDITING STUDENT'S ATTENDANCE STATUS
+# TODO: testing todos-to-issue 1
 def edit_attendance(attendance_dictionary, student_id):
   if student_id in attendance_dictionary:
     new_attendance_status = presence_function()
